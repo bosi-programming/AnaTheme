@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../webfonts/lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../webfonts/lato/Lato-Black.ttf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../webfonts/inter/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../webfonts/inter/static/Inter-Black.ttf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../webfonts/inter/static/Inter-Bold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  src: url("../webfonts/fa-brands-400.eot");
+}
+
+html,
+body,
+kbd,
+samp {
+  font-family: "Inter", cursive;
+}
+
+pre code {
+  display: block;
+}
+
+code {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  font-family: monospace;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+i {
+  font-size: 26px;
+}
+
+button {
+  padding: 6px 16px !important;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+p,
+li {
+  font-family: "Inter", "Open Sans";
+  font-size: 22px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", "Open Sans";
+  text-align: center;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 80px auto 30px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 60px auto 15px;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+.container {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+strong {
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop-hide {
+    display: none;
+  }
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
