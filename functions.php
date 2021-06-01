@@ -17,8 +17,6 @@ function init_theme()
 }
 add_action('init', 'init_theme');
 
-add_filter('excerpt_more', 'wpdocs_excerpt_more');
-
 // Adding stylesheets
 
 function cssGlobals()
@@ -49,6 +47,15 @@ function cssGlobals()
   );
 
   wp_enqueue_style('header');
+
+  wp_register_style(
+    'footer',
+    get_template_directory_uri() . '/footer.css',
+    array(),
+    '1.0',
+  );
+
+  wp_enqueue_style('footer');
 
   wp_register_style(
     'fontawesome',

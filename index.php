@@ -21,11 +21,6 @@ wp_enqueue_style('index');
     ?>
   </div>
 </main>
-<footer class="footer">
-  <i class="fab fa-linkedin index-icon"></i>
-  <i class="fab fa-medium icon"></i>
-</footer>
-
 <?php
 get_footer();
 ?>
