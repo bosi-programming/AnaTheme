@@ -74,3 +74,10 @@ wp_register_style(
   array(),
   '1.0',
 );
+
+wp_register_style(
+  'sobre',
+  get_template_directory_uri() . '/sobre.css',
+  array(),
+  '1.0',
+);
