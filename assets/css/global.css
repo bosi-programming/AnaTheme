@@ -166,3 +166,9 @@ strong {
     flex-wrap: wrap;
   }
 }
+
+@media (max-width: 1023px) {
+  .mobile-hide {
+    display: none !important;
+  }
+}

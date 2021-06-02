@@ -81,3 +81,10 @@ wp_register_style(
   array(),
   '1.0',
 );
+
+wp_register_style(
+  'single',
+  get_template_directory_uri() . '/single.css',
+  array(),
+  '1.0',
+);
