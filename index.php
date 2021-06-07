@@ -21,6 +21,5 @@ wp_enqueue_style('index');
     ?>
   </div>
 </main>
-<?php
-get_footer();
-?>
+<?php wp_footer(); ?>
+</body>

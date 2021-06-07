@@ -46,4 +46,5 @@ $papel = get_field('papel');
   <?php the_content(); ?>
 </div>
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>
+</body>

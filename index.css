@@ -15,6 +15,7 @@
   object-fit: fill;
 }
 .post-title {
+  font-weight: 400 !important;
   font-size: 23px;
   line-height: 166%;
   text-align: center;
