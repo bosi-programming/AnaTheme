@@ -172,3 +172,8 @@ strong {
     display: none !important;
   }
 }
+
+.active {
+  margin-top: 4px;
+  border-bottom: 4px solid black;
+}

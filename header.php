@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+
+function removeAcents($string)
+{
+  return preg_replace(array("/(á|à|ã|â|ä)/", "/(Á|À|Ã|Â|Ä)/", "/(é|è|ê|ë)/", "/(É|È|Ê|Ë)/", "/(í|ì|î|ï)/", "/(Í|Ì|Î|Ï)/", "/(ó|ò|õ|ô|ö)/", "/(Ó|Ò|Õ|Ô|Ö)/", "/(ú|ù|û|ü)/", "/(Ú|Ù|Û|Ü)/", "/(ñ)/", "/(Ñ)/"), explode(" ", "a A e E i I o O u U n N"), $string);
+}
+
+$full_url = home_url($wp->request);
+$current_url = end(explode('/', $full_url));
+
+?>
+
 <head <?php do_action('add_head_attributes'); ?>>
   <?php $home = get_template_directory_uri(); ?>
   <meta charset="UTF-8">
@@ -9,7 +21,7 @@
     <?php bloginfo('name'); ?>
   </title>
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗒️</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗒️</text></svg>">
 
   <link rel="manifest" href="/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
@@ -36,7 +48,7 @@
         <? if($menu_items): ?>
         <?php foreach ($menu_items as $item) : ?>
 
-          <li class="header-nav-item menu-item">
+          <li class="header-nav-item menu-item <?= removeAcents(strtolower($item->title)); ?> <?= basename(get_permalink()) === strtolower($item->title) ? 'active' : ''; ?>">
             <a class="header-nav-item" href="<?= $item->url; ?>">
               <h3 class="header-nav-item"><?= $item->title; ?></h3>
             </a>

@@ -3,6 +3,7 @@
 get_header();
 wp_enqueue_style('single');
 
+$hero = get_field('foto_hero');
 $overview = get_field('overview');
 $ano = get_field('ano');
 $plataforma = get_field('plataforma');
@@ -11,7 +12,7 @@ $papel = get_field('papel');
 <?php if (get_the_post_thumbnail() !== '') : ?>
 
   <a href="<?php the_permalink(); ?>">
-    <?php the_post_thumbnail('full', ['class' => 'single-img', 'alt' =>  get_the_title()]); ?>
+    <img class="single-img" src="<?php echo esc_url($hero['url']); ?>" alt="<?php echo esc_attr($hero['alt']); ?>" />
   </a>
 
 <?php endif; ?>
