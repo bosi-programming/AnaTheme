@@ -173,7 +173,7 @@ strong {
   }
 }
 
-.active {
+.active, .menu-item:hover {
   margin-top: 4px;
   border-bottom: 4px solid black;
 }
